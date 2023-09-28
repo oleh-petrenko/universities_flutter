@@ -1,10 +1,11 @@
 class UniversityModel {
-  UniversityModel(this.universities);
   final List<University> universities;
 
+  UniversityModel(this.universities);
+
   factory UniversityModel.fromJson(List<dynamic> json) {
-    List<University> uniList = json.map((item) =>
-        University.fromJson(item)).toList();
+    List<University> uniList =
+        json.map((item) => University.fromJson(item)).toList();
     return UniversityModel(uniList);
   }
 }
@@ -20,6 +21,7 @@ class University {
   String get displayableTitle {
     return "Country: $country, code: $alphaTwoCode, name: $name";
   }
+
   String get displayableSubtitle {
     return webPages[0];
   }
